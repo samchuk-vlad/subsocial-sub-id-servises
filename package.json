@@ -1,0 +1,48 @@
+{
+  "name": "subsocial-sub-id-services",
+  "version": "0.2.3",
+  "description": "Off-chain services for SubId.",
+  "author": "DappForce contributors",
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/olehmell/subsocial-sub-id-services",
+  "engines": {
+    "node": ">= 14"
+  },
+  "scripts": {
+    "start": "node ./build/src/index.js",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "clean": "rimraf coverage build tmp",
+    "lint": "tsc --noEmit && eslint '*/**/*.{ts,tsx}' --quiet --fix",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@subsocial/config": "^0.4.25",
+    "@types/bn.js": "^4.11.5",
+    "@types/connect-timeout": "^0.0.34",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.3",
+    "@types/jest": "^24.0.15",
+    "@types/jsonabc": "^2.3.1",
+    "@types/multer": "^1.4.4",
+    "@types/node": "^10.14.10",
+    "@types/request-promise": "^4.1.46",
+    "jest": "~24.8.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "@subsocial/api": "0.5.9-dev.2",
+    "@subsocial/types": "0.5.9-dev.2",
+    "@subsocial/utils": "0.5.9-dev.2",
+    "axios": "^0.21.1",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.4",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "lodash.isempty": "^4.4.0",
+    "multer": "^1.4.2",
+    "request-promise": "^4.2.5"
+  }
+}
